@@ -1,0 +1,59 @@
+{
+    "dbconnection" :  "mongodb://localhost:27017/hugoinsurance",
+    "validators" : {
+        "UUID"       : "^[a-f0-9\\-]{10}$",
+        "Price"      : "^\\d+\\.\\d{2}$",
+        "Zip Code"   : "^[0-9]{5,9}$",
+        "Create Date": "^\\d{4}-\\d{2}-\\d{2}$",
+        "VIN"        : "^[0-9a-z]{10,20}$",
+        "Year"       : "^\\d{4}$",
+        "Update Date": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "uploaders" : {
+        "john" : {
+            "psk" : "psk1",
+            "columns_order" : [
+                "UUID",
+                "Price",
+                "Zip Code",
+                "Create Date",
+                "VIN",
+                "Make",
+                "Model",
+                "Mileage",
+                "Year",
+                "Update Date"
+            ]
+        },
+        "jack" : {
+            "psk" : "psk2",
+            "columns_order" : [
+                "UUID",
+                "VIN",
+                "Make",
+                "Model",
+                "Mileage",
+                "Year",
+                "Price",
+                "Zip Code",
+                "Create Date",
+                "Update Date"
+            ]
+        },
+        "jill" : {
+            "psk" : "psk3",
+            "columns_order" : [
+                "Year",
+                "Price",
+                "Zip Code",
+                "Create Date",
+                "Update Date",
+                "UUID",
+                "VIN",
+                "Make",
+                "Model",
+                "Mileage"
+            ]
+        }
+    }
+}

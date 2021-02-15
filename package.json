@@ -1,0 +1,26 @@
+{
+    "name": "hugo_insurance",
+    "version": "1.0.0",
+    "description": "CSV Importing",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm install --only=prod",
+        "build-dev": "npm install",
+        "dev": "npm run build-dev && nodemon index.js",
+        "lint": "npm eslint *.js",
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "body-parser-csv": "^1.1.0",
+        "express": "^4.17.1",
+        "express-http-proxy": "^1.5.1",
+        "minimist": "^1.2.5",
+        "mongodb": "^3.6.4"
+    },
+    "author": "Constantine Filin",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^7.19.0",
+        "nodemon": "^2.0.4"
+    }
+}
