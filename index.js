@@ -13,7 +13,7 @@ const common       = require('./common');
 class Server {
     constructor() {
     }
-    async init( config_file ) {
+    async init() {
         // If this throws out then a async promise will be failed and it will be caught by the caller
         this.config = require(common.argv.config_file);
         // Translate RegExp patterns into RegExp objects
@@ -125,7 +125,7 @@ const upload = ( query, body ) => {
             throw Error(`Length of line #${lineno} is not expected ${uploader.columns_order.length}}`);
         return Object.map(
             line,
-            (ndx,v) => {
+            (ndx) => {
                 const field_name = uploader.columns_order[ndx];
                 // UUID is supposed to be the ID of the record. In Mongo it means _id
                 // Let's map UUID into _id
