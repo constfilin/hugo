@@ -38,9 +38,9 @@ common.init([
 // Since the uploaders can upload huge files (the file size really depends on the client and server buffer sizes,
 // see https://stackoverflow.com/questions/5053290/large-file-upload-though-html-form-more-than-2-gb), we do not
 // use JSON body parser - this can potentially create OOM situation at the server. However i am not sure how to
-// control NodeJS HTTP body reader buffer size.. Does NodeJS even have this limitation?
+// control NodeJS HTTP body reader buffer size.. Does NodeJS even have this limit?
 //
-// How else to we support huge files? How about letting users gzip them before submittal? Great idea but we will have
+// How else do we support huge files? How about letting users gzip them before submittal? Great idea but we will have
 // to gunzip them before reading. While gunzipping can certainly be done in NodeJS, I'd just do it in NGINX proxying
 // the requests to this NodeJS express app. This is because we would need NGINX proxy anyway if only for the reason
 // of loading balancing the upload requests to NodeJS backends. How to configure NGINX proxy to gunzip HTTP request is
