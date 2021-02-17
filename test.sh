@@ -1,0 +1,1 @@
+/usr/bin/curl -vvvv -d '2021,99.99,12345,2020-10-10,2020-11-11,1234567891,1234567890,Honda,Accord,60000' -H 'Content-Type: text/csv' 'http://127.0.0.1:9888/api/upload?u=jill&ts=foo&signature=V5kDKXTCtenCE738MvA5PZzs27I6B%2FxuyizYcYhkO1I%3D'
